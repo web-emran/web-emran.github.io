@@ -678,21 +678,36 @@ textarea.form-control {
     }
 }
 
+
 .navbar-part {
-    padding: 0px 15px
+    padding: 0px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff;
 }
 
 .navbar-fixed {
     position: fixed;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    z-index: 2;
-    background: var(--navbar-fixed);
-    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1)
+    top: -70px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(70px);
+    -ms-transform: translateY(70px);
+    transform: translateY(70px);
+    -webkit-transition: -webkit-transform 500ms ease, background 200ms ease;
+    transition: transform 500ms ease, background 200ms ease;
+} 
+.navbar-fixed .navbar-link{
+    padding: 20px 0px 25px;
 }
-
 .navbar-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -807,7 +822,6 @@ textarea.form-control {
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s
 }
-
 .navbar-link:hover {
     color: var(--primary)
 }
@@ -822,9 +836,15 @@ textarea.form-control {
 
 @media (max-width: 991px) {
     .navbar-part {
-        padding: 10px 15px
+        padding: 10px 15px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
-
+    .navbar-slide .navbar-link{
+        padding: 12px 15px !important;
+    }
+    .banner-part, .single-banner{
+        padding-top: 52px !important;
+    }
     .navbar-logo img {
         width: 150px
     }
@@ -862,7 +882,8 @@ textarea.form-control {
     }
 
     .navbar-cross {
-        display: block
+        display: block;
+        cursor: pointer;
     }
 
     .navbar-list {

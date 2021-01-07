@@ -1293,7 +1293,8 @@
 .banner-part {
     background: var(--banner-bg);
     overflow: hidden;
-    position: relative
+    position: relative;
+    padding-top: 98px;
 }
 
 .banner-part .container {
