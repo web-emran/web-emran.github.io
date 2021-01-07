@@ -2137,6 +2137,8 @@
 .preloader .shape-p{
     -webkit-animation: loader 4s linear infinite;
     animation: loader 4s linear infinite;
+    height: 150px;
+    z-index: 1;
 }
 
 @keyframes loader {

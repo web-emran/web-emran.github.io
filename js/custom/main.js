@@ -30,3 +30,13 @@ $((function () {
 })), $(".page-link").on("click", (function () {
     $(".page-link").removeClass("active"), $(this).addClass("active")
 }));
+// Preloader JS
+function preloader(){
+    if( $('.preloader').length ){
+        $(window).on('load', function() {
+            $('.preloader').fadeOut();
+            $('.preloader').delay(50).fadeOut('slow');  
+        })   
+    }
+}
+preloader();
