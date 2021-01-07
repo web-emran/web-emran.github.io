@@ -1017,3 +1017,17 @@ textarea.form-control {
         margin: 5px 0px
     }
 }
+@media (max-width: 575px){
+    .footer-icon{
+        display: block;
+        text-align: center;
+    }
+    .footer-icon li{
+        display: inline-block;
+        margin: 0 5px;
+        margin-bottom: 10px;
+    }
+    .footer-text li h6{
+        text-align: center;
+    }
+}
